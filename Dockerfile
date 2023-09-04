@@ -1,5 +1,5 @@
 # NodeJS Version 16
-FROM node:18-alpine AS builder
+FROM node:18-buster-slim AS builder
 
 # Copy Dir
 COPY . ./app
