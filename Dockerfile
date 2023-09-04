@@ -8,8 +8,8 @@ COPY . ./app
 WORKDIR /app
 
 # Install Node Package
-RUN pnpm install --frozen-lockfile && \
-    pnpm build
+RUN yarn install --frozen-lockfile && \
+    yarn build
 
 FROM nginx:alpine
 
