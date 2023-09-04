@@ -1,5 +1,5 @@
 # NodeJS Version 16
-FROM node:18-alpine AS builder
+FROM node:18-slim AS builder
 
 # Copy Dir
 COPY . ./app
@@ -8,8 +8,8 @@ COPY . ./app
 WORKDIR /app
 
 # Install Node Package
-RUN yarn install && \
-    yarn run build
+RUN pnpm install --frozen-lockfile && \
+    pnpm build
 
 FROM nginx:alpine
 
