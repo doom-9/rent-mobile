@@ -74,6 +74,15 @@ export const routes = [
       keepAlive: true,
     },
   },
+  {
+    name: 'findingAHouseServiceProtocol',
+    path: '/findingAHouseServiceProtocol',
+    component: () => import('@/views/findingAHouseServiceProtocol/index.vue'),
+    meta: {
+      title: '用户协议',
+      keepAlive: true,
+    },
+  },
   // 匹配不到重定向会主页
   {
     // 找不到路由重定向到404页面
