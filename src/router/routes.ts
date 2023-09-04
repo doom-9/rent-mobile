@@ -70,7 +70,7 @@ export const routes = [
     path: '/userAgreement',
     component: () => import('@/views/userAgreement/index.vue'),
     meta: {
-      title: '隐私协议',
+      title: '用户协议',
       keepAlive: true,
     },
   },
