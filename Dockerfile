@@ -1,5 +1,5 @@
 # NodeJS Version 16
-FROM node:18-slim AS builder
+FROM node:20-slim AS builder
 
 # Copy Dir
 COPY . ./app
