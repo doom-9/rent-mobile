@@ -12,7 +12,7 @@ export const lang: langType = {
     en: '英文',
     zh: '中文',
   },
-  introduction: '一个快速开发vue3的移动端模板',
+  introduction: '一个快速开发vue3的移动端模板。。。',
   home: {
     support: '支持',
     cssMultiLanguage: 'css图片多语言',
