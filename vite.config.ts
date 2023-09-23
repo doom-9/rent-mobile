@@ -10,12 +10,13 @@ const pathResolve = (dir: string) => {
 // https://vitejs.dev/config/
 export default function ({ command, mode }: ConfigEnv): UserConfig {
   const isProduction = command === 'build';
-  const root = './';
+  const root = process.cwd();
   const env = loadEnv(mode, root);
   const viteEnv = wrapperEnv(env);
 
   return {
     root,
+    base: './',
     resolve: {
       alias: [
         {
