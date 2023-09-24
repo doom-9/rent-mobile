@@ -16,7 +16,6 @@ export default function ({ command, mode }: ConfigEnv): UserConfig {
 
   return {
     root,
-    base: './',
     resolve: {
       alias: [
         {
