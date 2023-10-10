@@ -83,6 +83,15 @@ export const routes = [
       keepAlive: true,
     },
   },
+  {
+    name: 'contract',
+    path: '/contract',
+    component: () => import('@/views/contract/index.vue'),
+    meta: {
+      title: '合同',
+      keepAlive: true,
+    },
+  },
   // 匹配不到重定向会主页
   {
     // 找不到路由重定向到404页面
