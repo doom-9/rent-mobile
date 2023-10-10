@@ -153,7 +153,7 @@
     <p>&nbsp;</p>
     <p>出租人：{{ route.params.landlord }}</p>
     <p>&nbsp;</p>
-    <p>承租人：<img :src="route.params.tenantSign" alt="" /></p>
+    <p>承租人：<img v-if="route.params.tenantSign" :src="route.params.tenantSign" alt="" class="tenantSign" /></p>
     <p>&nbsp;</p>
     <p>（以下无正文）</p>
     <p>熊猫易租房小程序二维码</p>
@@ -347,5 +347,10 @@
 <style scoped lang="scss">
   .page {
     padding: 20px;
+
+    .tenantSign {
+      width: 300px;
+      height: 150px;
+    }
   }
 </style>
