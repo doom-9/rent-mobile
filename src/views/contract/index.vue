@@ -2,7 +2,7 @@
   <div class="page">
     <p style="text-align: center"><strong>熊猫易租房房屋租赁合同</strong></p>
     <p style="text-align: center"><strong>房屋租赁合同</strong></p>
-    <p>合同编号：</p>
+    <p>合同编号：{{ route.params.contractNo }}</p>
     <p>&nbsp;</p>
     <p><strong>签约提示：</strong></p>
     <ol>
@@ -14,15 +14,20 @@
       >
     </ol>
     <p>&nbsp;</p>
-    <p>出租人：</p>
-    <p>出租人手机号：</p>
-    <p>出租人身份证号：</p>
-    <p><br />承租人：</p>
-    <p>承租人手机号：</p>
-    <p>承租人身份证号：</p>
+    <p>出租人：{{ route.params.landlord }}</p>
+    <p>出租人手机号：{{ route.params.landlordPhone }}</p>
+    <p>出租人身份证号：{{ route.params.landlordIdCard }}</p>
+    <p><br />承租人：{{ route.params.tenant }}</p>
+    <p>承租人手机号：{{ route.params.tenantPhone }}</p>
+    <p>承租人身份证号：{{ route.params.tenantIdCard }}</p>
     <p><br />资产管理人（简称&ldquo;熊猫易租房&rdquo;）：（受出租人委托）上海慧霞商贸有限公司</p>
     <p><strong>第一条 房屋租赁信息及交付</strong></p>
-    <p>（一） 房屋坐落： ， 房屋户型：， 租赁用途为居住。租赁期间： 。</p>
+    <p
+      >（一） 房屋坐落：{{ route.params.address }} ， 房屋户型：{{ route.params.houseType }}， 租赁用途为居住。租赁期间：{{
+        route.params.leaseDate
+      }}
+      。</p
+    >
     <p
       >（二） 本合同签订并支付首笔款后，承租人应在到达澳大利亚后的 48
       小时内，和熊猫易租房工作人员一同来到租住现场确认交割物品：如钥匙、床、洗衣机等家具，并随后在熊猫易租房小程序内完成物业交割确认，超时未确认的，视为承租人认可物业交割信息并已接收房屋。</p
@@ -146,9 +151,9 @@
     <p>&nbsp;</p>
     <p><strong>签署区：</strong></p>
     <p>&nbsp;</p>
-    <p>出租人：</p>
+    <p>出租人：{{ route.params.landlord }}</p>
     <p>&nbsp;</p>
-    <p>承租人：&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p>承租人：<img :src="route.params.tenantSign" alt="" /></p>
     <p>&nbsp;</p>
     <p>（以下无正文）</p>
     <p>熊猫易租房小程序二维码</p>
@@ -167,11 +172,11 @@
         <tr>
           <td style="width: 109.984px">房屋信息</td>
           <td style="width: 109.984px">房屋地址</td>
-          <td style="width: 109.984px">&nbsp;</td>
+          <td style="width: 109.984px">{{ route.params.address }}</td>
           <td style="width: 109.984px">户型</td>
-          <td style="width: 109.984px">&nbsp;</td>
+          <td style="width: 109.984px">{{ route.params.houseType }}</td>
           <td style="width: 109.984px">出租人</td>
-          <td style="width: 110.094px">&nbsp;</td>
+          <td style="width: 110.094px">{{ route.params.landlord }}</td>
         </tr>
       </tbody>
     </table>
@@ -182,13 +187,13 @@
       <tbody>
         <tr>
           <td style="width: 113.25px">姓名</td>
-          <td style="width: 113.25px">&nbsp;</td>
+          <td style="width: 113.25px">{{ route.params.tenant }}</td>
           <td style="width: 113.25px">性别</td>
           <td style="width: 113.25px">&nbsp;</td>
         </tr>
         <tr>
           <td style="width: 113.25px">联系电话</td>
-          <td style="width: 113.25px">&nbsp;</td>
+          <td style="width: 113.25px">{{ route.params.tenantPhone }}</td>
           <td style="width: 113.25px">职业</td>
           <td style="width: 113.25px">&nbsp;</td>
         </tr>
@@ -252,27 +257,27 @@
       <tbody>
         <tr>
           <td style="width: 209.5px">租赁期限</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.leaseDate }}</td>
           <td style="width: 209.5px">入住日期</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.checkInDate }}</td>
         </tr>
         <tr>
           <td style="width: 209.5px">费用期数</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.feePeriod }}</td>
           <td style="width: 209.5px">租金/每期</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.fee }}</td>
         </tr>
         <tr>
           <td style="width: 209.5px">服务费/每期</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.serviceFee }}</td>
           <td style="width: 209.5px">押金</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.deposit }}</td>
         </tr>
         <tr>
           <td style="width: 209.5px">付款方式</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">{{ route.params.paymentMethod }}</td>
           <td style="width: 209.5px">优惠金额</td>
-          <td style="width: 209.5px">&nbsp;</td>
+          <td style="width: 209.5px">自动计算</td>
         </tr>
         <tr>
           <td style="width: 209.5px">&nbsp;</td>
@@ -316,7 +321,28 @@
   </div>
 </template>
 
-<script lang="ts" setup name="LoginPage"></script>
+<script lang="ts" setup name="LoginPage">
+  import { useRoute } from 'vue-router';
+
+  // contractNo 合同编号
+  // 出租人 landlord
+  // 出租人手机号 landlordPhone
+  // 出租人身份证号 landlordIdCard
+  // 承租人 tenant
+  // 承租人手机号 tenantPhone
+  // 承租人身份证号 tenantIdCard
+  // 房屋坐落 address
+  // 房屋户型 houseType
+  // 租赁日期 leaseDate
+  // 承租人签名图片 tenantSign
+  // 入住日期 checkInDate
+  // 多少期费用 feePeriod
+  // 每期租金金额 fee
+  // 每期服务费 serviceFee
+  // 押金 deposit
+  // 付款方式 paymentMethod
+  const route = useRoute();
+</script>
 
 <style scoped lang="scss">
   .page {
