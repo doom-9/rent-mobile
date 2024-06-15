@@ -92,6 +92,15 @@ export const routes = [
       keepAlive: true,
     },
   },
+  {
+    name: 'aboutUs',
+    path: '/aboutUs',
+    component: () => import('@/views/aboutUs/index.vue'),
+    meta: {
+      title: '关于我们',
+      keepAlive: true,
+    },
+  },
   // 匹配不到重定向会主页
   {
     // 找不到路由重定向到404页面
